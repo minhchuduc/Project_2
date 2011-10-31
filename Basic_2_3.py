@@ -17,6 +17,9 @@ if __name__ == '__main__':
     freq = {}
     for word in words_dict.keys():
         freq[word] = len(words_dict[word])
-        words_dict[word] = list(set(words_dict[word]))  #Convert list --> set --> list: muc dich la` de de-duplicate
-        tmp_list = ["%s" % element for element in words_dict[word]] #Convert list like [1,2,3,4] to ['1','2',3','4']
-        print freq[word], word, " ".join(tmp_list)  #Convert list like ['1','2',3','4'] to a string '1 2 3 4'
+        words_dict[word] = list(set(words_dict[word]))  #Convert list --> set --> list: muc. dich' la de "de-duplicate"
+        tmp_list = [ "%s" % element for element in words_dict[word] ]  #Convert list like [1,2,3,4] to ['1','2',3','4']
+        """ Can also use:
+        tmp_list = [ str(element) for element in words_dict[word] ] """
+
+        print freq[word], word, ' '.join(tmp_list)  #Convert list like ['1','2',3','4'] to a string '1 2 3 4'
