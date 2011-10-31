@@ -1,0 +1,50 @@
+Part I: Basic
+
+1. Viết một hàm reverse_string()  nhận vào tham số là một string và trả về một chuỗi đảo ngược:
+ví dụ gọi reverse_string('abcd') thì trả về chuỗi 'dcba'
+Sau đó viết chương trình nhận vào 1 chuỗi từ bán phím, rồi in ra chuỗi đảo ngược.
+
+2. Viết một chương trình đọc 1 file text (tên file nhập vào từ bán phím), rồi tính số lần xuất hiện của từng từ trong file đó, kèm theo các dòng mà từ đó xuất hiện:
+Ví dụ: input file có nội dung:
+Python is a cool language but OCaml
+is even cooler since it is purely functional
+thì in ra màn hình kết quả:
+3 is 1 2
+1 a 1
+1 but 1
+1 cool 1
+1 cooler 2
+1 even 2
+1 functional 2
+1 it 2
+1 language 1
+1 ocaml 1
+1 purely 2
+1 python 1
+1 since 2
+
+3. Viết lại bài 2 bằng cách sử dụng các kiểu dữ liệu dict, set, và hàm sort (built-in function)
+___________________________________________________________________________________________________
+
+Part II: Advanced
+
+1. Lap chuong trinh tinh 100!
+
+2. Lap chuong trinh tinh 7^50
+
+3. Bai toan 8 hau: Lap chuong trinh xep 8 con hau len ban co quoc te sao cho khong co 2 con hau nao o tinh trang de doa lan nhau (ban co 8x8, hau co the an theo cac huong: thang, doc va cheo)
+
+4. Lap chuong trinh nhap cac day so tu nhien 1,2,3,..N^2 vao 1 mang A[NxN] theo chieu xoay' (xem hinh`: spiral_path.jpg) 
+
+5. Viet chuong trinh lam cac viec sau:
+a) Nhap tu ban phim 2 xau ki tu S1 va S2
+b) Ta co the dung 1 trong 3 loai phep bien doi sau:
+	BD1: xoa 1 ki tu nao do trong xau
+	BD2: them 1 ki tu nao do vao 1 vi tri nao do cua xau
+	BD3: thay 1 ki tu nao do trong xau bang 1 ki tu khac
+Thong bao ra file OUT.TXT lieu co the dung 1 so phep bien doi thuoc 3 loai tren de bien doi S1 thanh S2 ko, quy cach thong bao nhu sau: Ví dụ: S1 = ptslddf, S2 = tsgldds, thi ta phai thong bao nhu sau:
+	Bien doi duoc
+	ptslddf - xoa p/l => tslddf
+	tslddf - them g/3 => tsglddf
+	tsglddf - thay f/7/s => tsgldds
+c) Trong truong hop bien doi duoc, hay tim 1 cach bien doi dung it phep bien doi nhat va thong bao tiep vao file OUT.TXT theo quy cach tren.
