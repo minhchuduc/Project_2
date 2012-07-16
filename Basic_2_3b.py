@@ -1,10 +1,12 @@
+import string
 if __name__ == '__main__':
     filename = raw_input("File name to process: ")
     input_file = open(filename, 'r')
     words_dict = {}
+    exclude = set(string.punctuation + '\n')
     for i, line in enumerate(input_file.readlines()):
-        #print i, line.strip('\n')
-        for word in line.strip('\n').lower().split():
+        line = ''.join(ch for ch in line if ch not in exclude)
+        for word in line.lower().split():
             if word not in words_dict.keys():
                 words_dict[word] = [1, set([i+1])]    # words_dict format:  {word: [freq, set(line_numbers)]}, use "set" to auto-deduplicate
             else:   # existed in words_dict
