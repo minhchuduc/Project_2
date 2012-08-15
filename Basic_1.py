@@ -1,10 +1,6 @@
-#Coding time: 7 minutes
-def reverse_string(str):
-    len_str = len(str)
-    output_str = ''
-    for i in range(len_str):
-        output_str = output_str + str[len_str-1-i]
-    return output_str
+#Coding time: 1 minutes
+def reverse_string(string):
+    return string[::-1]
     
 if __name__ == '__main__':
     input_str = raw_input('Input string: ')
