@@ -5,15 +5,13 @@ import time
 #Algo:
 """
 We create a range(1,N)
-go in directions ultil nothing left
+go in directions until nothing left
 """
 
-
-
 def go_left(matrix, start_r, start_c):
-    size = len(matrix)
+    global N
     col = start_c
-    for i in range(size):
+    for i in range(N):
         if matrix[start_r][col] == 0:
             matrix[start_r][col] = numbers.pop()
             last_mod = col
@@ -22,21 +20,21 @@ def go_left(matrix, start_r, start_c):
     return (start_r, last_mod)
 
 def go_right(matrix, start_r, start_c):
-    size = len(matrix)
+    global N
     col = start_c
-    for i in range(size):
+    for i in range(N):
         if matrix[start_r][col] == 0:
             matrix[start_r][col] = numbers.pop()
             last_mod = col
-        if col < size - 1:
+        if col < N - 1:
             col += 1
     return (start_r, last_mod)
 
 
 def go_up(matrix, start_r, start_c):
-    size = len(matrix)
+    global N
     row = start_r
-    for i in range(size):
+    for i in range(N):
         if matrix[row][start_c] == 0:
             matrix[row][start_c] = numbers.pop()
             last_mod = row
@@ -46,19 +44,19 @@ def go_up(matrix, start_r, start_c):
 
 
 def go_down(matrix, start_r, start_c):
-    size = len(matrix)
+    global N
     row = start_r
-    for i in range(size):
+    for i in range(N):
         if matrix[row][start_c] == 0:
             matrix[row][start_c] = numbers.pop()
             last_mod = row
-        if row < size - 1:
+        if row < N - 1:
             row += 1
     return (last_mod, start_c)
 
 
-
 def main():
+    global N
     N = input('Nhap N: ')
     time_start = time.time()
     N = int(N)
@@ -66,6 +64,7 @@ def main():
     matrix = []
 
     global numbers
+    # Pop pop the tail, we need number increase, so create below list
     numbers = range(N*N, 0, -1)
     # 2D matrix
     for row in range(N):
@@ -73,6 +72,7 @@ def main():
         for col in range(N):
             matrix[row].append(0)
 
+    #Start coordinate
     last = (0, 0)
     while len(numbers) > 0:
         last = go_right(matrix, last[0], last[1])
