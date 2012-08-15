@@ -8,6 +8,10 @@ We create a range(1,N)
 go in directions until nothing left
 """
 
+def go_spiral(matrix, start_r, start_c, step):
+    if len(numbers) <= 0:
+        return
+
 def go_left(matrix, start_r, start_c):
     global N
     col = start_c
@@ -60,17 +64,12 @@ def main():
     N = input('Nhap N: ')
     time_start = time.time()
     N = int(N)
-    # Fill the matrix with 0s
-    matrix = []
 
     global numbers
     # Pop pop the tail, we need number increase, so create below list
     numbers = range(N*N, 0, -1)
-    # 2D matrix
-    for row in range(N):
-        matrix.append([])
-        for col in range(N):
-            matrix[row].append(0)
+    # create 2D matrix ,Filled  with 0s
+    matrix = [[0 for _ in range(N)] for _ in range(N)]
 
     #Start coordinate
     last = (0, 0)
